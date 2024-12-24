@@ -68,21 +68,19 @@ function playGame() {
             }
             
         }
-        console.log("Human vs Comp");
-        console.log(human + " vs " + comp );
+        alert("MATCH #" + i + "\nHuman vs Comp\n" + human + " vs " + comp + "\nCurrent Score:\nH:  " + humanScore + " C: " + compScore);
         
       }
 
     while (i < 5) {
+        i += 1
         const humanSelection = getHumanChoice();
         const computerSelection = getCompChoice();
   
         playRound(humanSelection, computerSelection);
 
-        i += 1
     }
-    alert("Human Score:" + humanScore);
-    alert("Computer Score:" + compScore);
+    alert("Final Score\nHuman Score :" + humanScore + "\nComputer Score: " + compScore)
 }
 
 playGame()
